@@ -4,7 +4,7 @@ body{
 
 }
 header{
-	background-image: url(TG/Header.png);
+	background-image: url(Header.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	height: 850px;
@@ -57,7 +57,7 @@ header img{
 	align-items: center;
 	width: 25%;
 	height: 50px;
-	background-image: url(TG/button.png);
+	background-image: url(button.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -75,7 +75,7 @@ header img{
 	align-items: center;
 	width: 10%;
 	height: 65px;
-	background-image: url(TG/Arrow.png);
+	background-image: url(Arrow.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -215,7 +215,7 @@ header img{
 	align-items: center;
 	width: 25%;
 	height: 50px;
-	background-image: url(TG/button.png);
+	background-image: url(button.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -520,7 +520,7 @@ header img{
 		align-items: center;
 		width: 400px;
 		height: 50px;
-		background-image: url(TG/button.png);
+		background-image: url(button.png);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 100%;
