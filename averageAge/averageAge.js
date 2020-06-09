@@ -46,21 +46,29 @@ middleAgeBySex (infoArray, `W`);*/
 
 
 const middleAgeBySex = (infoArray, sex) => {
-    let menAge = 0,
-    numberOfMen = 0,
-    numberOfWomen = 0,
-    womenAge = 0,
-    result = 0;
-    infoArray.forEach ((item) => {
-    if (item.sex == 'M'){
-    numberOfMen += 1;
-    menAge += item.age;
-} else {numberOfWomen += 1;
-    womenAge += item.age};
-});
-    (sex == 'M')? result = menAge/numberOfMen : result = womenAge/numberOfWomen;
-    alert(result);
+   
+    let i = 0;
+
+  let result = infoArray.reduce((average,item) => {
+    /*
+    Сам алгоритм: работает одинаково на два случая, которые
+    по-любому будут. Зависит это от 'sex', который указывается 
+    при вызове функции. На выходе у меня result == NaN. Я
+    так понимаю, что все дело в условии с item.sex, потому что
+    когда я оставляю условие просто sex == 'M' выдает сумму всех
+    item.age. Как только добавляю item.sex, сразу на выходе NaN.
+    */
+    if (sex == 'M' && item.sex == 'M') {
+        ++i;
+        return ((average + item.age) / i);
+    } else if(sex == 'W' && item.sex == 'W'){
+        ++i;
+        return ((average + item.age) / i);
+    }
+  },0);
+     return result;
 }
+
 
 const infoArray = [{
             name: `Ivan`,
@@ -89,10 +97,6 @@ const infoArray = [{
         },
 ];
 
-middleAgeBySex (infoArray, `W`);
-
-
-
-
+middleAgeBySex (infoArray, `M`);
 
 
