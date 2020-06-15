@@ -14,17 +14,17 @@ isInArray([1, 2, '3' , 4, `hello`], '3');*/
 
 modifyArr([1,2,3,4,5], 6, `hello`);*/
 
-function transformString(str, el, newEl){
+const transformString =(str, el, newEl)=>{
+  
     let lowStr=str.toLowerCase();
     let lowEl=el.toLowerCase();
     let lowNewEl=newEl.toLowerCase();
-    let firstPart=str.slice(0,lowStr.indexOf(lowEl));
-    let thirdPart=str.length-firstPart.length-el.length;
-    if (lowStr.indexOf(lowEl) == -1){ 
-   return `element ${el} not found in string ${str}`
-        } else { 
-   return `${str.slice(0,lowStr.indexOf(lowEl))}${newEl} ${str.slice(thirdPart)}`;
-        }                           
 
+    if(lowStr.indexOf(lowEl) != -1){
+      return `${str.slice(0,lowStr.indexOf(lowEl))}${newEl}${str.slice(lowStr.indexOf(lowEl)+el.length)}`;
+    } else{
+      return `element ${el} not found in string ${str}`;
+    }
 }
-transformString(`my naMe is Alex`,`name`, `coolName`);
+
+
